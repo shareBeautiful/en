@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="德思意科技有限公司是一家技术驱动型的创新公司。专注于智慧产业信息化建设，具有应用软件开发、企业应用程序开发及Web开发等实力，拥有多年精湛的技术积淀、强大的公关资源、丰富的营销实践。">
+    <meta name="keywords" content="德思意,互联网医院,产品与服务">
+    <link rel="stylesheet" href="js/index.css">
+    <!--    <link rel="stylesheet" href="./iconfont/iconfont.css">-->
+    <title>DSY TECH CO.LTD</title>
+</head>
+<style>
+
+
+</style>
+<body>
+
+<div id="app" v-cloak>
+    <!--  头部  -->
+    <div id="top"></div>
+    <div class="header-box">
+        <div id="header" class="w">
+            <div class="logo">
+                <img src="image/logo.png" alt="">
+                <a href="javascript:">{{title}}</a>
+            </div>
+            <!--<div class="menu-box">
+                <ul>
+                    <li  v-for="item in dsy_data.menus" :key="item.id">
+                        <a :href="item.href">{{item.desc}}</a>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+
+    </div>
+
+    <!--    主体  -->
+    <div id="main-box" class="w">
+
+
+
+        <div id="b">　</div>
+        <h2 class="main-title">{{menu[2].desc}}</h2>
+        <div class="container-box">
+            <div class="info">
+               <p v-for="item in dsy_data.aboutData.desc">{{item}}</p>
+            </div>
+            <div class="info">
+                <img class="about-us" src="image/about_us.png" alt="">
+            </div>
+        </div>
+
+        <div id="a">　</div>
+        <h2 class="main-title">{{menu[1].desc}}</h2>
+        <div class="container-box x-box">
+            <a class="item-box" href="javascript:" v-for="item in dsy_data.productData">
+                <div class="item-pic">
+                    <img :src="dsy_data.imgSrc+item.img" alt="">
+                </div>
+                <div class="item-info">
+                    <h2 class="title">{{item.desc}}</h2>
+                    <!--<p class="info">
+                        医疗物联网是物联网的细分场景。
+                    </p>-->
+                </div>
+            </a>
+        </div>
+
+        <div id="c">　</div>
+<!--        <h2 class="main-title">{{menu[3].desc}}</h2>-->
+        <div class="desc">
+           <p v-for="item in dsy_data.cultureData.desc">{{item}}</p>
+        </div>
+        <!--<div class="desc-pic">
+            <div class="pic scale-pic"><img src="image/a_9.jpg" alt=""></div>
+            <div class="pic scale-pic"><img src="image/a_7.jpg" alt=""></div>
+            <div class="pic scale-pic"><img src="image/a_8.jpg" alt=""></div>
+            <div class="pic scale-pic"><img src="image/a_11.jpg" alt=""></div>
+        </div>-->
+        <div class="desc-pic">
+            <img class="about-us" src="image/about_us_pic.png" alt="">
+        </div>
+        <div id="d"></div>
+        <h2 class="main-title">{{menu.at(-1).desc}}</h2>
+        <div class="desc">
+            <div class="info-pic">
+                <img src="image/address.png" alt="">
+            </div>
+            <div class="info-pic">
+               <!-- <img src="image/qr.png" alt="">-->
+                <div v-for="item in dsy_data.contactData.contactWay.desc">
+                    <p><a :href="'tel:'+dsy_data.contactData.tel">{{item}}</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<!--<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>-->
+<!--<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.min.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
+<script src="js/dsy_data.js"></script>
+<script type="text/javascript">
+    //设置
+    /*myFocus.set({
+        id: 'banner',//ID
+        pattern: 'mF_fancy',//风格
+        loadIMGTimeout: 0,
+        height: 350,
+        time: 3,
+        wrap: false,
+        auto: true,
+        // autoZoom: true,
+    }); */
+    let app = {
+        data() {
+            return {
+                lang,
+                dsy_data,
+                menu: dsy_data.menu,
+                title: lang === 'zh'? dsy_data.title.desc : dsy_data.title.enDesc,
+            }
+        },
+        computed: {
+            newMenu(){
+                return this.menu.filter(item => !item.hide)
+            }
+        },
+        methods: {
+
+        },
+        mounted() {
+            document.title = this.title
+            if (this.lang === 'en') {
+                this.dsy_data.aboutData.desc = this.dsy_data.aboutData.enDesc;
+                this.dsy_data.cultureData.desc = this.dsy_data.cultureData.enDesc;
+                this.dsy_data.contactData.contactWay.desc = this.dsy_data.contactData.contactWay.enDesc;
+                this.dsy_data.menu.forEach(item => {
+                    item.desc = item.enDesc
+                });
+                this.dsy_data.menus.forEach(item => {
+                    item.desc = item.enDesc
+                });
+                this.dsy_data.productData.forEach(item => {
+                    item.desc = item.enDesc
+                });
+            }
+            /*document.querySelector('.menu-box').addEventListener('click', function (e) {
+                e.preventDefault();
+                const t = e.target;
+                if (t.tagName.toLowerCase() === 'a') {
+                    var lis = this.querySelectorAll('li');
+                    for (var i = 0; i < lis.length; i++) {
+                        lis[i].classList.remove('active')
+                    }
+                    e.target.parentNode.classList.add('active')
+                    scrollDom(e.target.hash)
+                }
+            })
+
+            function scrollDom(name) {
+                var top = document.querySelector(name).offsetTop;
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                })
+            }*/
+        }
+    }
+
+    Vue.createApp(app).mount('#app')
+
+</script>
+</html>
