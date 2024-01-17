@@ -9,7 +9,7 @@
           content="德思意科技有限公司是一家技术驱动型的创新公司。专注于智慧产业信息化建设，具有应用软件开发、企业应用程序开发及Web开发等实力，拥有多年精湛的技术积淀、强大的公关资源、丰富的营销实践。">
     <meta name="keywords" content="德思意,互联网医院,产品与服务">
     <link rel="stylesheet" href="js/index.css">
-    <!--    <link rel="stylesheet" href="./iconfont/iconfont.css">-->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/10.2.0/swiper-bundle.css">
     <title>DSY TECH CO.LTD</title>
 </head>
 <style>
@@ -25,7 +25,7 @@
         <div id="header" class="w">
             <div class="logo">
                 <img src="image/logo.png" alt="">
-                <a href="javascript:">{{title}}</a>
+                <span>{{title}}</span>
             </div>
             <!--<div class="menu-box">
                 <ul>
@@ -37,6 +37,32 @@
         </div>
 
     </div>
+    <div id="banner">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image/banner_1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/banner_2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/banner_3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/banner_4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/banner_5.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
 
     <!--    主体  -->
     <div id="main-box" class="w">
@@ -54,7 +80,7 @@
             </div>
         </div>
 
-        <div id="a">　</div>
+
         <h2 class="main-title">{{menu[1].desc}}</h2>
         <div class="container-box x-box">
             <a class="item-box" href="javascript:" v-for="item in dsy_data.productData">
@@ -70,7 +96,6 @@
             </a>
         </div>
 
-        <div id="c">　</div>
 <!--        <h2 class="main-title">{{menu[3].desc}}</h2>-->
         <div class="desc">
            <p v-for="item in dsy_data.cultureData.desc">{{item}}</p>
@@ -81,10 +106,7 @@
             <div class="pic scale-pic"><img src="image/a_8.jpg" alt=""></div>
             <div class="pic scale-pic"><img src="image/a_11.jpg" alt=""></div>
         </div>-->
-        <div class="desc-pic">
-            <img class="about-us" src="image/about_us_pic.png" alt="">
-        </div>
-        <div id="d"></div>
+
         <h2 class="main-title">{{menu.at(-1).desc}}</h2>
         <div class="desc">
             <div class="info-pic">
@@ -102,22 +124,10 @@
 </div>
 
 </body>
-<!--<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>-->
-<!--<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.min.js"></script>-->
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
 <script src="js/dsy_data.js"></script>
 <script type="text/javascript">
-    //设置
-    /*myFocus.set({
-        id: 'banner',//ID
-        pattern: 'mF_fancy',//风格
-        loadIMGTimeout: 0,
-        height: 350,
-        time: 3,
-        wrap: false,
-        auto: true,
-        // autoZoom: true,
-    }); */
     let app = {
         data() {
             return {
@@ -151,30 +161,26 @@
                     item.desc = item.enDesc
                 });
             }
-            /*document.querySelector('.menu-box').addEventListener('click', function (e) {
-                e.preventDefault();
-                const t = e.target;
-                if (t.tagName.toLowerCase() === 'a') {
-                    var lis = this.querySelectorAll('li');
-                    for (var i = 0; i < lis.length; i++) {
-                        lis[i].classList.remove('active')
-                    }
-                    e.target.parentNode.classList.add('active')
-                    scrollDom(e.target.hash)
-                }
-            })
 
-            function scrollDom(name) {
-                var top = document.querySelector(name).offsetTop;
-                window.scrollTo({
-                    top: top,
-                    behavior: "smooth"
-                })
-            }*/
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
         }
     }
-
     Vue.createApp(app).mount('#app')
-
 </script>
 </html>
