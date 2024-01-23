@@ -136,7 +136,7 @@ let dsy_data = {
             ],
             enDesc: [
                 'Tel(Wechat)：15626121215',
-                'Address：深圳市福田区福田南路7号'
+                'Address：No. 7, Futian South Road, Futian District, Shenzhen City'
             ]
         }
     }
