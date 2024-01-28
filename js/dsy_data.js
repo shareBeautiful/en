@@ -92,11 +92,6 @@ let dsy_data = {
             img: 'product_6.jpg',
             desc: 'IOT物联网设备',
             enDesc: 'name...'
-        },
-        {
-            img: 'product_4.jpg',
-            desc: 'IOT物联网设备',
-            enDesc: 'name...'
         }
     ],
 

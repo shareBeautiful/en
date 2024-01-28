@@ -82,18 +82,21 @@
 
 
         <h2 class="main-title">{{menu[1].desc}}</h2>
-        <div class="container-box x-box">
+        <div class="container-box y-box">
             <a class="item-box" href="javascript:" v-for="item in dsy_data.productData">
                 <div class="item-pic">
                     <img :src="dsy_data.imgSrc+item.img" alt="">
                 </div>
                 <div class="item-info">
                     <h2 class="title">{{item.desc}}</h2>
-                    <!--<p class="info">
-                        医疗物联网是物联网的细分场景。
-                    </p>-->
+                    <p class="info">
+                        This is a detailed introduction...
+                    </p>
                 </div>
             </a>
+        </div>
+        <div class="desc">
+            <img class="about-us" src="image/about_us2.png" alt="">
         </div>
 
 <!--        <h2 class="main-title">{{menu[3].desc}}</h2>-->
