@@ -249,7 +249,7 @@ body {
     transition: transform .2s;
 }
 
-.scale-pic img:hover {
+.scale-pic:hover img {
     transform: scale(1.2);
     transition: transform .2s;
 }
