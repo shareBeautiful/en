@@ -7,20 +7,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description"
           content="德思意科技有限公司是一家技术驱动型的创新公司。专注于智慧产业信息化建设，具有应用软件开发、企业应用程序开发及Web开发等实力，拥有多年精湛的技术积淀、强大的公关资源、丰富的营销实践。">
-    <meta name="keywords" content="德思意,互联网医院,产品与服务">
+    <meta name="keywords" content="DSY TECH,德思意,互联网医院,产品与服务">
     <link rel="stylesheet" href="js/index.css">
+    <link rel="stylesheet" href="js/index_phone.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/10.2.0/swiper-bundle.css">
     <title>DSY TECH CO.LTD</title>
 </head>
-<style>
-
-
-</style>
 <body>
-
 <div id="app" v-cloak>
     <!--  头部  -->
-    <div id="top"></div>
     <div class="header-box">
         <div id="header" class="w">
             <div class="logo">
@@ -37,6 +32,7 @@
         </div>
 
     </div>
+    <!-- 轮播 -->
     <div id="banner">
         <!-- Swiper -->
         <div class="swiper mySwiper">
@@ -66,62 +62,70 @@
 
     <!--    主体  -->
     <div id="main-box" class="w">
-
-
-
-        <div id="b">　</div>
-        <h2 class="main-title">{{menu[2].desc}}</h2>
-        <div class="container-box">
-            <div class="info">
-               <p v-for="item in dsy_data.aboutData.desc">{{item}}</p>
-            </div>
-            <div class="info">
-                <img class="about-us" src="image/about_us.png" alt="">
-            </div>
-        </div>
-
-
-        <h2 class="main-title">{{menu[1].desc}}</h2>
-        <div class="container-box y-box">
-            <a class="item-box" href="javascript:" v-for="item in dsy_data.productData">
-                <div class="item-pic">
-                    <img :src="dsy_data.imgSrc+item.img" alt="">
+        <!--  关于我们 -->
+        <div class="main-item">
+            <h2 class="main-title">{{productTitle.aboutUs}}</h2>
+            <div class="container-box">
+                <div class="info">
+                    <p v-for="item in dsy_data.aboutUs">{{item}}</p>
                 </div>
-                <div class="item-info">
-                    <h2 class="title">{{item.desc}}</h2>
-                    <p class="info">
-                        This is a detailed introduction...
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="desc">
-            <img class="about-us" src="image/about_us2.png" alt="">
-        </div>
-
-<!--        <h2 class="main-title">{{menu[3].desc}}</h2>-->
-        <div class="desc">
-           <p v-for="item in dsy_data.cultureData.desc">{{item}}</p>
-        </div>
-        <!--<div class="desc-pic">
-            <div class="pic scale-pic"><img src="image/a_9.jpg" alt=""></div>
-            <div class="pic scale-pic"><img src="image/a_7.jpg" alt=""></div>
-            <div class="pic scale-pic"><img src="image/a_8.jpg" alt=""></div>
-            <div class="pic scale-pic"><img src="image/a_11.jpg" alt=""></div>
-        </div>-->
-
-        <h2 class="main-title">{{menu.at(-1).desc}}</h2>
-        <div class="desc">
-            <div class="info-pic">
-                <img src="image/address.png" alt="">
-            </div>
-            <div class="info-pic">
-               <!-- <img src="image/qr.png" alt="">-->
-                <div v-for="item in dsy_data.contactData.contactWay.desc">
-                    <p><a :href="'tel:'+dsy_data.contactData.tel">{{item}}</a></p>
+                <div class="info">
+                    <img class="about-us" src="image/about_us.png" alt="">
                 </div>
             </div>
+        </div>
+        <!--  产品展示  -->
+        <div class="main-item">
+            <h2 class="main-title">{{productTitle.productShow}}</h2>
+            <div class="container-box y-box">
+                <a class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
+                    <div class="item-pic">
+                        <img :src="dsy_data.imgSrc+item.img" alt="">
+                    </div>
+                    <div class="item-info">
+                        <h2 class="title">{{item.desc}}</h2>
+                        <p class="info">
+                            This is a detailed introduction...
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
+        <!--  产品详情  -->
+        <div class="main-item">
+            <h2 class="main-title">{{productTitle.productDetail}}</h2>
+            <div class="product-detail">
+                <a class="item-box" href="javascript:" v-for="item in dsy_data.productDetail">
+                    <img class="item-pic" :src="dsy_data.imgSrc+item.img" alt="">
+                    <div class="item-info">
+                        {{item.desc}}
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 企业文化 -->
+        <div class="main-item">
+            <div class="desc">
+                <p v-for="item in dsy_data.cultureData">{{item}}</p>
+            </div>
+        </div>
+
+        <!--  联系我们  -->
+        <div class="main-item">
+            <h2 class="main-title">{{productTitle.contactUs}}</h2>
+            <div class="desc">
+                <div class="info-pic">
+                    <img src="image/address.png" alt="">
+                </div>
+                <div class="info-pic">
+                    <!-- <img src="image/qr.png" alt="">-->
+                    <div v-for="item in dsy_data.contactUs.contactWay">
+                        <p><a :href="'tel:'+dsy_data.contactUs.tel">{{item}}</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -136,54 +140,43 @@
             return {
                 lang,
                 dsy_data,
-                menu: dsy_data.menu,
-                title: lang === 'zh'? dsy_data.title.desc : dsy_data.title.enDesc,
+                productTitle: dsy_data.productTitle,
+                menus: dsy_data.menus,
+                title: dsy_data.title
             }
         },
         computed: {
-            newMenu(){
+            newMenu() {
                 return this.menu.filter(item => !item.hide)
             }
         },
         methods: {
-
-        },
-        mounted() {
-            document.title = this.title
-            if (this.lang === 'en') {
-                this.dsy_data.aboutData.desc = this.dsy_data.aboutData.enDesc;
-                this.dsy_data.cultureData.desc = this.dsy_data.cultureData.enDesc;
-                this.dsy_data.contactData.contactWay.desc = this.dsy_data.contactData.contactWay.enDesc;
-                this.dsy_data.menu.forEach(item => {
-                    item.desc = item.enDesc
-                });
-                this.dsy_data.menus.forEach(item => {
-                    item.desc = item.enDesc
-                });
-                this.dsy_data.productData.forEach(item => {
-                    item.desc = item.enDesc
+            // banner 轮播
+            bannerShow() {
+                var swiper = new Swiper(".mySwiper", {
+                    loop: true,
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    effect: 'fade',
+                    speed: 500,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
                 });
             }
-
-            var swiper = new Swiper(".mySwiper", {
-                loop: true,
-                spaceBetween: 30,
-                centeredSlides: true,
-                effect: 'fade',
-                speed: 500,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
+        },
+        mounted() {
+            document.title = this.title;
+            this.bannerShow()
         }
     }
     Vue.createApp(app).mount('#app')
