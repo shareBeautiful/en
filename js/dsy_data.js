@@ -37,7 +37,7 @@ let dsy_data = {
         {
             img: 'product_1.jpg',
             desc: 'XPremium quality',
-            info: 'i0cm aluminum umbrella pole.\n' +
+            info: '10cm aluminum umbrella pole.\n' +
                 'Umbrella pole wall thickness 3.2mm\n' +
                 'Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
         },
