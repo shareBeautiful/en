@@ -65,12 +65,12 @@
         <!--  关于我们 -->
         <div class="main-item">
             <h2 class="main-title">{{productTitle.aboutUs}}</h2>
-            <div class="container-box">
+            <div class="">
                 <div class="info">
                     <p v-for="item in dsy_data.aboutUs">{{item}}</p>
                 </div>
                 <div class="info">
-                    <img class="about-us" src="image/about_us.png" alt="">
+                    <img class="about-us" src="image/about_us_pic.png" alt="">
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                     <div class="item-info">
                         <h2 class="title">{{item.desc}}</h2>
                         <p class="info">
-                            This is a detailed introduction...
+                            {{item.info}}
                         </p>
                     </div>
                 </a>

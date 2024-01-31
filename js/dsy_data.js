@@ -36,59 +36,61 @@ let dsy_data = {
     productShow: [
         {
             img: 'product_1.jpg',
-            desc: 'Premium quality'
+            desc: 'XPremium quality',
+            info: 'i0cm aluminum umbrella pole.\n' +
+                'Umbrella pole wall thickness 3.2mm\n' +
+                'Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
         },
         {
             img: 'product_2.jpg',
             desc: 'Built-in LED light',
+            info: '10cm aluminum umbrella poleUmbrella wall thickness 2.48mmUmbrella rib material. carbon steel frame with LED lightGuaranteed not to fade within 5 years'
         },
         {
             img: 'product_3.jpg',
-            desc: 'name...'
+            desc: 'Uehides Tents',
+            info: '10cm aluminum umbrella pole\n' +
+                'Umbrella pole wall thickness 2.48mm Umbrella rib material thickened carbon\n' +
+                'steel frame\n' +
+                'Guaranteed not to fade within 5 years'
         },
         {
             img: 'product_4.jpg',
-            desc: 'name...'
+            desc: 'Roucing Chairs',
+            info: '7.5cm aluminum umbrella pole.Umbrella pole wal thickness 2.2mm Umbrella rib material: carbon steel frame\n' +
+                'Guaranteed not to fade within 2 years'
         },
         {
             img: 'product_5.jpg',
-            desc: 'name...'
+            desc: 'Cast Aluminum Tabs And Chais'
         },
         {
             img: 'product_6.jpg',
-            desc: 'name...'
+            desc: 'Beach Lounge'
         },
         {
             img: 'a_3.jpg',
-            desc: 'name...'
+            desc: 'Park Lounge'
         }
     ],
 
     // 产品详情
     productDetail: [
         {
-            img: 'product_2.jpg',
-            desc: 'Built-in LED light',
+            img: 'product_detail_01.png',
+            desc: 'Fabric material',
         },
         {
-            img: 'product_3.jpg',
-            desc: 'name...'
+            img: 'product_detail_02.png',
+            desc: 'Cast aluminum handle'
         },
         {
-            img: 'product_4.jpg',
-            desc: 'name...'
+            img: 'product_detail_03.png',
+            desc: 'Water tank water injection and sand injection display'
         },
         {
-            img: 'product_5.jpg',
-            desc: 'name...'
-        },
-        {
-            img: 'product_6.jpg',
-            desc: 'name...'
-        },
-        {
-            img: 'product_1.jpg',
-            desc: 'name...'
+            img: 'product_detail_04.png',
+            desc: 'More details about Roman umbrellas'
         }
     ],
 
