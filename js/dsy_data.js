@@ -95,7 +95,10 @@ let dsy_data = {
     ],
 
     // 关于我们
-    aboutUs: [],
+    aboutUs: [
+        'DSY TECH CO.LTD, is a leading company in the parasol industrybased in Shenzhen, GD. With our commitment to innovation andquality, we strive to provide the best parasol solutions for ourcustomers.',
+        'At DSY TECH CO.LTD., we specialize in designing and manufacturinghigh-quality parasols that combine functionality, durability, andstyle. Our team of experts is dedicated to creating innovativedesigns that not only provide protection from the sun but alsoenhance outdoor spaces. With our extensive range of parasols, wecater to various needs and preferences, ensuring customersatisfaction every time.'
+    ],
 
     // 企业文化
     cultureData: [],
