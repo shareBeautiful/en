@@ -48,7 +48,7 @@ let dsy_data = {
         },
         {
             img: 'product_5.jpg',
-            desc: '★ Uehides Tents',
+            desc: '',
             info: '10cm aluminum umbrella pole\n' +
                 'Umbrella pole wall thickness 2.48mm Umbrella rib material thickened carbon\n' +
                 'steel frame\n' +
@@ -56,7 +56,7 @@ let dsy_data = {
         },
         {
             img: 'product_6.jpg',
-            desc: '★ Roucing Chairs',
+            desc: '',
             info: '7.5cm aluminum umbrella pole.Umbrella pole wal thickness 2.2mm Umbrella rib material: carbon steel frame\n' +
                 'Guaranteed not to fade within 2 years'
         },
