@@ -85,16 +85,16 @@
         <!--  产品展示  -->
         <div class="main-item">
             <h2 class="main-title">{{productTitle.productShow}}</h2>
-            <div class="container-box y-box">
+            <div class="container-box x-box">
                 <div class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
                     <div class="item-pic">
                         <img :src="dsy_data.imgSrc+item.img" alt="">
                     </div>
                     <div class="item-info">
                         <h2 class="title">{{item.desc}}</h2>
-                        <p class="info">
+                        <!--<p class="info">
                             {{item.info}}
-                        </p>
+                        </p>-->
                     </div>
                 </div>
             </div>

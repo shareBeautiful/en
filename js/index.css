@@ -204,7 +204,7 @@ body {
 }
 
 .container-box .item-box .item-info .info {
-    height: 100px;
+    min-height: 60px;
     overflow: hidden;
     font-size: 20px;
     line-height: 1.6;
