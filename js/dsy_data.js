@@ -55,6 +55,16 @@ let dsy_data = {
             info: ''
         },
         {
+            img: 'product_9.png',
+            desc: 'Roman umbrella',
+            info: ''
+        },
+        {
+            img: 'product_10.png',
+            desc: 'Cast aluminum tables and chairs',
+            info: ''
+        },
+        /*{
             img: 'product_1.jpg',
             desc: 'Premium quality',
             info: '10cm aluminum umbrella pole.\n' +
@@ -79,12 +89,34 @@ let dsy_data = {
             desc: '',
             info: '7.5cm aluminum umbrella pole.Umbrella pole wal thickness 2.2mm Umbrella rib material: carbon steel frame\n' +
                 'Guaranteed not to fade within 2 years'
-        }
+        }*/
     ],
 
     // 产品详情
     productDetail: [
         {
+            img: 'product_1.jpg',
+            desc: '10cm aluminum umbrella pole.\n' +
+                'Umbrella pole wall thickness 3.2mm\n' +
+                'Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
+        },
+        {
+            img: 'product_2.jpg',
+            desc: '10cm aluminum umbrella poleUmbrella wall thickness 2.48mmUmbrella rib material. carbon steel frame with LED lightGuaranteed not to fade within 5 years'
+        },
+        {
+            img: 'product_3.jpg',
+            desc: '10cm aluminum umbrella pole\n' +
+                'Umbrella pole wall thickness 2.48mm Umbrella rib material thickened carbon\n' +
+                'steel frame\n' +
+                'Guaranteed not to fade within 5 years'
+        },
+        {
+            img: 'product_4.jpg',
+            desc: '7.5cm aluminum umbrella pole.Umbrella pole wal thickness 2.2mm Umbrella rib material: carbon steel frame\n' +
+                'Guaranteed not to fade within 2 years'
+        }
+        /*{
             img: 'product_detail_01.png',
             desc: 'Fabric material',
         },
@@ -99,7 +131,7 @@ let dsy_data = {
         {
             img: 'product_detail_04.png',
             desc: 'More details about Roman umbrellas'
-        }
+        }*/
     ],
 
     // 关于我们

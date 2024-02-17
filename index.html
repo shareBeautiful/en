@@ -86,7 +86,7 @@
         <div class="main-item">
             <h2 class="main-title">{{productTitle.productShow}}</h2>
             <div class="container-box y-box">
-                <a class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
+                <div class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
                     <div class="item-pic">
                         <img :src="dsy_data.imgSrc+item.img" alt="">
                     </div>
@@ -96,7 +96,7 @@
                             {{item.info}}
                         </p>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
 
@@ -104,12 +104,12 @@
         <div class="main-item">
             <h2 class="main-title">{{productTitle.productDetail}}</h2>
             <div class="product-detail">
-                <a class="item-box scale-pic" href="javascript:" v-for="item in dsy_data.productDetail">
+                <div class="item-box scale-pic" href="javascript:" v-for="item in dsy_data.productDetail">
                     <img class="item-pic" :src="dsy_data.imgSrc+item.img" alt="">
                     <div class="item-info">
                         {{item.desc}}
                     </div>
-                </a>
+                </div>
             </div>
         </div>
 
