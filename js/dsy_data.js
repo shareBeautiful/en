@@ -35,19 +35,39 @@ let dsy_data = {
     // 产品与服务
     productShow: [
         {
-            img: 'product_3.jpg',
-            desc: '★ Premium quality',
+            img: 'product_5.png',
+            desc: 'Park lounge',
+            info: ''
+        },
+        {
+            img: 'product_6.png',
+            desc: 'Pavilion swing',
+            info: ''
+        },
+        {
+            img: 'product_7.png',
+            desc: 'Rocking chair',
+            info: ''
+        },
+        {
+            img: 'product_8.png',
+            desc: 'Vehicle tents',
+            info: ''
+        },
+        {
+            img: 'product_1.jpg',
+            desc: 'Premium quality',
             info: '10cm aluminum umbrella pole.\n' +
                 'Umbrella pole wall thickness 3.2mm\n' +
                 'Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
         },
         {
-            img: 'product_4.jpg',
-            desc: '★ Built-in LED light',
+            img: 'product_2.jpg',
+            desc: 'Built-in LED light',
             info: '10cm aluminum umbrella poleUmbrella wall thickness 2.48mmUmbrella rib material. carbon steel frame with LED lightGuaranteed not to fade within 5 years'
         },
         {
-            img: 'product_5.jpg',
+            img: 'product_3.jpg',
             desc: '',
             info: '10cm aluminum umbrella pole\n' +
                 'Umbrella pole wall thickness 2.48mm Umbrella rib material thickened carbon\n' +
@@ -55,22 +75,10 @@ let dsy_data = {
                 'Guaranteed not to fade within 5 years'
         },
         {
-            img: 'product_6.jpg',
+            img: 'product_4.jpg',
             desc: '',
             info: '7.5cm aluminum umbrella pole.Umbrella pole wal thickness 2.2mm Umbrella rib material: carbon steel frame\n' +
                 'Guaranteed not to fade within 2 years'
-        },
-        {
-            img: 'product_1.jpg',
-            desc: 'Cast Aluminum Tabs And Chais'
-        },
-        {
-            img: 'product_2.jpg',
-            desc: 'Beach Lounge'
-        },
-        {
-            img: 'a_3.jpg',
-            desc: 'Park Lounge'
         }
     ],
 
