@@ -338,8 +338,8 @@ body {
 }
 .product-detail .item-info {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
