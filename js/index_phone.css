@@ -31,8 +31,6 @@
     }
     .main-title {
         font-size: 22px;
-        margin-top: 20px;
-        margin-bottom: 15px;
     }
     .container-box .item-box .item-info .title {
         font-size: 20px;
@@ -42,5 +40,13 @@
     }
     .desc-pic .pic {
         width: 50%;
+    }
+    .contact-map {
+        width: 100%;
+    }
+    .contact-info {
+        width: 100%;
+        margin: 0;
+
     }
 }

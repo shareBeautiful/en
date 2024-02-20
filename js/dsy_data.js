@@ -25,11 +25,39 @@ let dsy_data = {
     // 模块名字
     productTitle: {
         productShow: 'Product Show',
-        productDetail: 'Product Detail',
+        productDetail: 'Product Details',
         aboutUs: 'About Us',
         cultureData: 'Culture',
         contactUs: 'Contact Us'
     },
+
+    // banner轮播
+    banner: [
+        {
+            img: 'banner_1.png',
+            desc: 'Park lounge',
+        },
+        {
+            img: 'banner_2.png',
+            desc: 'Park lounge',
+        },
+        {
+            img: 'banner_3.png',
+            desc: 'Park lounge',
+        },
+        {
+            img: 'banner_4.png',
+            desc: 'Park lounge',
+        },
+        {
+            img: 'banner_5.png',
+            desc: 'Park lounge',
+        },
+        {
+            img: 'banner_6.png',
+            desc: 'Park lounge',
+        }
+    ],
 
 
     // 产品与服务
@@ -69,7 +97,7 @@ let dsy_data = {
             desc: 'Premium quality',
             info: '10cm aluminum umbrella pole.\n' +
                 'Umbrella pole wall thickness 3.2mm\n' +
-                'Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
+                'Umbrella rib material. Aluminum alloy frame.'
         },
         {
             img: 'product_2.jpg',
@@ -96,7 +124,7 @@ let dsy_data = {
     productDetail: [
         {
             img: 'product_1.jpg',
-            desc: '10cm aluminum umbrella poleUmbrella pole wall thickness 3.2mm Umbrella rib material. Aluminum alloy frame.Guaranteed not to fade within 6 years'
+            desc: '10cm aluminum umbrella poleUmbrella pole wall thickness 3.2mm Umbrella rib material. Aluminum alloy frame.'
         },
         {
             img: 'product_2.jpg',
@@ -132,7 +160,7 @@ let dsy_data = {
 
     // 关于我们
     aboutUs: [
-        'DSY TECH CO.LTD, is a leading company in the parasol industrybased in Shenzhen, GD. With our commitment to innovation andquality, we strive to provide the best parasol solutions for ourcustomers.At DSY TECH CO.LTD., we specialize in designing and manufacturinghigh-quality parasols that combine functionality, durability, andstyle. Our team of experts is dedicated to creating innovativedesigns that not only provide protection from the sun but alsoenhance outdoor spaces. With our extensive range of parasols, wecater to various needs and preferences, ensuring customersatisfaction every time.'
+        'DSY tech Co., Ltd,located in a coastal city, Shenzhen in China.We specializes in the production and sales of outdoor furniture production,with a plant area of 30,000 square meters, our outdoor furniture products cover outdoor shade, outdoor tables and chairs, courtyard facilities, pavilion swings. Until now we have collected a wealth inexperience of production, servicing for tens of thousands clients to provide outdoor furniture.'
     ],
 
     // 企业文化
@@ -142,9 +170,9 @@ let dsy_data = {
     contactUs: {
         qrCode: 'qr.png',
         tel: '15626121215',
-        contactWay: [
-            'Tel(Wechat)：15626121215',
-            'Address：Shenzhen, China'
-        ]
+        address: 'Address: Shenzhen, China',
+        wechat: 'Tel(Wechat)：+86 15626121215',
+        whatsapp: 'WhatsApp: +852 92976978',
+        email: 'mayuan57225@163.com'
     }
 }

@@ -37,20 +37,8 @@
         <!-- Swiper -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="image/banner_1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="image/banner_2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="image/banner_3.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="image/banner_4.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="image/banner_5.jpg" alt="">
+                <div class="swiper-slide" v-for="item in dsy_data.banner">
+                    <img :src="imgSrc+'banner/'+item.img" alt="">
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -61,79 +49,105 @@
 
 
     <!--    主体  -->
-    <div id="main-box" class="w">
+    <div id="main-box">
         <!--  关于我们 -->
-        <div class="main-item">
-            <h2 class="main-title">{{productTitle.aboutUs}}</h2>
-            <div class="">
-                <div class="info">
-                    <p class="about-us-info" v-for="item in dsy_data.aboutUs">{{item}}</p>
-                </div>
+        <div class="main-item about-us">
+            <div class="w">
+                <h2 class="main-title">{{productTitle.aboutUs}}</h2>
+                <div class="">
+                    <div class="info">
+                        <p class="about-us-info" v-for="item in dsy_data.aboutUs">{{item}}</p>
+                    </div>
 
-                <!--<div class="about-us-item">
-                    <img class="about-pic" src="image/about_us_pic.png" alt="">
-                    <div class="about-txt">Roman umbrellasPavilion swingsVehicles three-people Three-rocking chairs</div>
-                </div>
-                <div class="about-us-item">
-                    <div class="about-txt">
-                        Cast aluminum tables and chairs Beach loungePark loungePlastic chairsCasual sofas
+                    <!--<div class="about-us-item">
+                        <img class="about-pic" src="image/about_us_pic.png" alt="">
+                        <div class="about-txt">Roman umbrellasPavilion swingsVehicles three-people Three-rocking chairs</div>
                     </div>
-                    <img class="about-pic" src="image/about_us_pic2.png" alt="">
-                </div>-->
+                    <div class="about-us-item">
+                        <div class="about-txt">
+                            Cast aluminum tables and chairs Beach loungePark loungePlastic chairsCasual sofas
+                        </div>
+                        <img class="about-pic" src="image/about_us_pic2.png" alt="">
+                    </div>-->
+                </div>
             </div>
         </div>
+
         <!--  产品展示  -->
-        <div class="main-item">
-            <h2 class="main-title">{{productTitle.productShow}}</h2>
-            <div class="container-box x-box">
-                <div class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
-                    <div class="item-pic">
-                        <img :src="dsy_data.imgSrc+item.img" alt="">
-                    </div>
-                    <div class="item-info">
-                        <h2 class="title">{{item.desc}}</h2>
-                        <!--<p class="info">
-                            {{item.info}}
-                        </p>-->
+        <div class="main-item product-show">
+            <div class="w">
+                <h2 class="main-title">{{productTitle.productShow}}</h2>
+                <div class="container-box x-box">
+                    <div class="item-box" href="javascript:" v-for="item in dsy_data.productShow">
+                        <div class="item-pic">
+                            <img :src="imgSrc+item.img" alt="">
+                        </div>
+                        <div class="item-info">
+                            <h2 class="title">{{item.desc}}</h2>
+                            <!--<p class="info">
+                                {{item.info}}
+                            </p>-->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!--  产品详情  -->
-        <div class="main-item">
-            <h2 class="main-title">{{productTitle.productDetail}}</h2>
-            <div class="product-detail">
-                <div class="item-box scale-pic" href="javascript:" v-for="item in dsy_data.productDetail">
-                    <img class="item-pic" :src="dsy_data.imgSrc+item.img" alt="">
-                    <div class="item-info">
-                        {{item.desc}}
+        <div class="main-item product-details">
+            <div class="w">
+                <h2 class="main-title">{{productTitle.productDetail}}</h2>
+                <div class="product-detail">
+                    <div class="item-box" href="javascript:" v-for="item in dsy_data.productDetail">
+                        <div class="item-wrap scale-pic">
+                            <img class="item-pic" :src="imgSrc+item.img" alt="">
+                            <div class="item-info">
+                                {{item.desc}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- 企业文化 -->
-        <div class="main-item">
-            <div class="desc">
-                <p v-for="item in dsy_data.cultureData">{{item}}</p>
+        <!--<div class="main-item culture">
+            <div class="w">
+                <div class="desc">
+                    <p v-for="item in dsy_data.cultureData">{{item}}</p>
+                </div>
             </div>
-        </div>
+        </div>-->
 
         <!--  联系我们  -->
-        <div class="main-item">
+        <div class="main-item contact-us">
+            <div class="w">
             <h2 class="main-title">{{productTitle.contactUs}}</h2>
-            <div class="desc">
-                <div class="info-pic">
+            <div class="container-box">
+                <div class="contact-map">
                     <img src="image/map.png" alt="">
                 </div>
-                <div class="info-pic">
-                    <!-- <img src="image/qr.png" alt="">-->
-                    <div v-for="item in dsy_data.contactUs.contactWay">
+                <div class="contact-info">
+                    <!--<div v-for="item in dsy_data.contactUs.contactWay">
                         <p><a :href="'tel:'+dsy_data.contactUs.tel">{{item}}</a></p>
+                    </div>-->
+                    <div class="item">
+                        {{dsy_data.contactUs.address}}
+                    </div>
+                    <div class="item">
+                        <a :href="'tel:'+dsy_data.contactUs.tel">{{dsy_data.contactUs.wechat}}</a>
+                    </div>
+                    <div class="item">
+                        {{dsy_data.contactUs.whatsapp}}
+                    </div>
+                    <div class="item">
+                        <a :href="'mailto:'+dsy_data.contactUs.email">Email: {{dsy_data.contactUs.email}}</a>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -148,6 +162,7 @@
             return {
                 lang,
                 dsy_data,
+                imgSrc: dsy_data.imgSrc,
                 productTitle: dsy_data.productTitle,
                 menus: dsy_data.menus,
                 title: dsy_data.title
