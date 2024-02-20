@@ -28,6 +28,7 @@ html {
     line-height: 1.6;
     min-height: 100%;
     font-weight: bolder;
+    scroll-behavior: smooth;
 }
 
 .w {
@@ -414,3 +415,20 @@ body {
     color: inherit;
 }
 
+#to-top {
+    background-color: rgb(129, 192, 242);
+    position: fixed;
+    z-index: 100;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#to-top:hover {
+    background-color: rgb(45, 150, 233);
+}
