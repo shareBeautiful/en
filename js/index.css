@@ -52,17 +52,26 @@ body {
     padding-bottom: 20px;
 }
 #banner {
-    background: #99CC66;
+    background: #99CCCC;
 }
 .about-us {
-    background: #CC9999;
+    background: #FFCCCC;
     color: #000;
+}
+.about-us .main-title {
+    background: #FFCCCC;
 }
 .product-show {
     background: #FF6666;
 }
+.product-show .main-title {
+    background: #FF6666;
+}
 .product-details {
-    background: #CC9966;
+    background: #6699CC;
+}
+.product-details .main-title {
+    background: #6699CC;
 }
 .culture {
 }
@@ -75,9 +84,9 @@ body {
 }
 
 .header-box {
-    position: sticky;
+    /*position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 99;*/
     background: gray;
     padding: 15px 10px;
     box-shadow: 0 2px 10px #ccc;
@@ -152,6 +161,9 @@ body {
 }
 
 .main-title {
+    position: sticky;
+    top: 0;
+    z-index: 99;
     padding: 65px 0 30px;
     font-size: 32px;
     font-weight: bold;
