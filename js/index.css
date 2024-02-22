@@ -41,7 +41,6 @@ body {
 }
 #main-box {
     padding-bottom: 30px;
-    background: #222;
 }
 #header {
     font-family: Segoe Print;
@@ -54,7 +53,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-#banner {
+/*#banner {
     background: #99CCCC;
 }
 .about-us {
@@ -75,7 +74,7 @@ body {
 }
 .product-details .main-title {
     background: #6699CC;
-}
+}*/
 .culture {
 }
 .contact-us {
