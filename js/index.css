@@ -39,9 +39,11 @@ html {
 body {
     min-height: 100%;
 }
+
 #main-box {
     padding-bottom: 30px;
 }
+
 #header {
     font-family: Segoe Print;
     display: flex;
@@ -49,10 +51,12 @@ body {
     padding-left: 3px;
     flex-wrap: wrap;
 }
+
 .main-item {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 /*#banner {
     background: #99CCCC;
 }
@@ -75,12 +79,15 @@ body {
 .product-details .main-title {
     background: #6699CC;
 }*/
+
 .culture {
 }
+
 .contact-us {
     background: #222;
     color: #c6c4c4;
 }
+
 .contact-us a {
     color: #e64343 !important;
 }
@@ -105,8 +112,8 @@ body {
     width: 58px;
     height: auto;
 }
-.logo span {
 
+.logo span {
     font-size: 22px;
     padding-left: 20px;
 }
@@ -173,6 +180,7 @@ body {
     text-align: center;
     line-height: 1;
     background: #fff;
+    color: #000;
 }
 
 .container-box {
