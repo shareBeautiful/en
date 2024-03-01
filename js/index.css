@@ -160,6 +160,7 @@ body {
 }
 #banner img {
     height: 100%;
+    object-fit: fill;
 }
 
 .main-title {

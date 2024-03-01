@@ -2,7 +2,6 @@
 // 默认显示语言 中文：zh,英文：en
 let lang = 'en'
 
-
 let dsy_data = {
     // 图片目录
     imgSrc: 'image/',
@@ -160,7 +159,7 @@ let dsy_data = {
 
     // 关于我们
     aboutUs: [
-        'DSY tech Co., Ltd,located in a coastal city, Shenzhen in China.We specializes in the production and sales of outdoor furniture production,with a plant area of 30,000 square meters, our outdoor furniture products cover outdoor shade, outdoor tables and chairs, courtyard facilities, pavilion swings. Until now we have collected a wealth inexperience of production, servicing for tens of thousands clients to provide outdoor furniture.'
+        'DSY tech Co. Ltd, located in a coastal city, Shenzhen in China. We specialize in the production and sales of outdoor furniture production, with a plant area of 30,000 square meters, our outdoor furniture products cover outdoor shade, outdoor tables and chairs, courtyard facilities, pavilion swings. Until now, we have collected a wealth inexperience of production, servicing for tens of thousands clients.'
     ],
 
     // 企业文化
