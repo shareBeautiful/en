@@ -197,11 +197,22 @@
                         prevEl: ".swiper-button-prev",
                     },
                 });
+            },
+            windowScroll() {
+                let toTop = document.querySelector('#to-top');
+                window.addEventListener('scroll',(event) => {
+                    if (window.scrollY >= 200) {
+                        toTop.style.display = 'block'
+                    }else {
+                        toTop.style.display = 'none'
+                    }
+                });
             }
         },
         mounted() {
             document.title = this.title;
-            this.bannerShow()
+            this.bannerShow();
+            this.windowScroll();
         }
     }
     Vue.createApp(app).mount('#app')

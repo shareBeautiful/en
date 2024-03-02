@@ -426,6 +426,7 @@ body {
 }
 
 #to-top {
+    display: none;
     background-color: rgb(129, 192, 242);
     position: fixed;
     z-index: 100;
